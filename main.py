@@ -34,18 +34,6 @@ def my_analytics(domain):
     global count_rows_max
     count_rows_max +=1
 
-    #  data_flag: 1/0
-    # domain, 1,0,0,0,  1   for train_csv
-    # domain, 1,0,0,0,      for test_csv
-
-    # with open("domains_analytics.csv", 'a') as csv_file:
-
-
-    # ip_flag = False
-    # for s in domain.split("."):
-    #     if len(s) <= 12 and s.isnumeric():
-    #         ip_flag = True
-    #         break
 
 csv_file = open("domains_analytics.csv", 'w+')
 analitycs_write = csv.writer(csv_file)
@@ -57,10 +45,7 @@ test30_write = csv.writer(csv_file30)
 csv_file70 = open("finance_train80.csv", 'w')
 test70_write = csv.writer(csv_file70)
 
-# try:
-#     os.unlink('domains_analytics.csv')
-# except FileNotFoundError:
-#     pass
+
 count_rows_max = 0
 MAXLINES = 100000
 domains_data = []
@@ -71,15 +56,7 @@ with gzip.open('ctl_records_sample.jsonlines — копия.gz', mode='rt') as 
         domains = cert['data']['leaf_cert']['all_domains']
         for domain in domains:
             my_analytics(domain)
-            # s = domain.split('.')
-            # print(domain)
-            # domains_data.setdefault(0, domain)
-            # domains_data[domain] += 1
-            # line_number += 1
-            # print(domains_data)
-
-            # if 'apple' in s:
-            #     print(domain)
+           
         line_number += 1
         if line_number > MAXLINES:
             break
