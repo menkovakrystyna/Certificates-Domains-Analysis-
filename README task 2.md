@@ -22,11 +22,11 @@ Explanation of the rules:
 In document Task - 2 Model
 - Applying logistic regression and predicting the test20 csv domains.
 - finding most inportant variables that influence whether the domain is fishin or not:
-# the most importsnt feature that detect the fishing accounts are 
+#the most importsnt feature that detect the fishing accounts are 
 #dots_5numbers_flag - in domain there are more than 5 dots
 #length - the lengh of the domain is more or equalls 40 symbolls
 #num_nosplit_flag - there are less than 20 numbers, goes one by one in the domain
-# defis_2number_flag -contains more or equalls 3 '-' in domain
+#defis_2number_flag -contains more or equalls 3 '-' in domain
 
 - apling a trained model to a document test20.csv that contains only domains and flags indicators. 
 - Store an aoutput whether the domain is fishing or not in a new file Prediction of Fishing Domains.csv.
